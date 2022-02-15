@@ -1,0 +1,87 @@
+<html>
+
+
+   <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         
+         img{width: 300px;height: 300px;}
+         .dropdown{position:absolute;}
+         .drop-cont {display: none;position: absolute;}
+         .show{display: block;}
+         .icon-bar {
+  width: 100%; /* Full-width */
+  background-color: #555; /* Dark-grey background */
+  overflow: auto; /* Overflow du
+      }
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.active {
+  background-color: #04AA6D; /* Add an active/current color */
+}
+
+         
+      </style>
+
+</head>
+<body id="page"onload="starttime()">
+</body>
+<button  onclick="eslam()"> &rarr;</button>
+<img id="img" src="../pic/1.jpg" >
+<button   id="btn"onclick="eslam2()">back</button>
+<button onclick="myfunction();this.innerHTML='red'">color</button>
+<div class="dropdown">
+<button onclick="eslam3()">menue</button>
+<div id="droping" class="drop-cont">
+   <a href="">link</a>
+   <a href="">link2</a>
+   <a href="">link3</a>
+</div>
+</div>
+<button onclick="changename()">change</button>
+<button onclick="hideen()">hiddeen</button>
+<button onclick="this.innerHTML=Date()">date</button>
+<p id="demo">mohamed rady</p>
+<input id="txt" type="text">
+<input  id= "sub"type="submit">
+<p id="demo2" ></p>
+<p id="demo3" ></p>
+<textarea  id="in" cols="30" rows="10"></textarea>
+<button onclick="out()">changing</button>
+<div id="out"></div>
+
+
+<div class="icon-bar">
+   <a class="active" href="#"><i class="fa fa-home"></i></a> 
+   <a href="#"><i class="fa fa-search"></i></a> 
+   <a href="#"><i class="fa fa-envelope"></i></a> 
+   <a href="#"><i class="fa fa-globe"></i></a>
+   <a href="#"><i class="fa fa-trash"></i></a> 
+ </div>
+  </html> 
+<script src="new.js"></script>
+<script>
+   document.getElementById('btn').innerHTML="&larr;"
+   function eslam(){document.getElementById('img').src='../pic/2.jpg'}
+   function eslam2(){document.getElementById('img').src='../pic/1.jpg'}
+   function eslam3(){document.getElementById('droping').classList.toggle("show")}
+   function myfunction() {document.getElementById('page').style.backgroundColor='red'}
+   function hideen()  {document.getElementById('demo').style.display='none'}
+   function changename() {var x = document.getElementById('demo').innerHTML;
+   var y =x.replace("mohamed","eslam");document.getElementById('demo').innerHTML=y}
+   
+   
+</script>

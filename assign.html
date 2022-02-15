@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+<form action="java.html">
+    <p>1-what is your country?</p>
+    
+    <input type="radio" id="egy" name="country"  >egypt </br>
+    <input type="radio" id="fr" name="country">france </br>
+    <input type="radio" id="usa" name="country">usa </br>
+    <input type="text" id = "txt" required>
+    <input type="button" value="result" onclick="result()" >
+    <button type="submit" onclick="result()">next</button></form>
+</body>
+</html>
+<script>
+    function result() {
+        //  var x = document.getElementById("egy").checked;
+//  document.getElementById('txt').value=x;
+if (document.getElementById('egy').checked){
+    document.getElementById('txt').value=1
+}
+//else { document.getElementById('txt').value=0 + "result is egypt"}
+}
+</script>
